@@ -36,14 +36,14 @@ export default React.createClass({
     }
     const intervalLabel = prettyInterval(refresh);
     return (
-      <div className="timepicker">
-        <div className="timepicker__refresh">
+      <div className="kbnUITimepicker">
+        <div className="kbnUITimepicker__refresh">
           <i className={pauseClass} onClick={this.handlePauseClick}></i>
-          <div className="timepicker__refresh-label" onClick={this.handleIntervalClick}>{ intervalLabel }</div>
+          <div className="kbnUITimepicker__refresh-label" onClick={this.handleIntervalClick}>{ intervalLabel }</div>
         </div>
-        <div className="timepicker__pick">
+        <div className="kbnUITimepicker__pick">
           <i className="fa fa-clock-o"></i>
-          <div className="timepicker__pick-label" onClick={this.handlePickerClick}>{ timefilterLabel }</div>
+          <div className="kbnUITimepicker__pick-label" onClick={this.handlePickerClick}>{ timefilterLabel }</div>
         </div>
       </div>
     );

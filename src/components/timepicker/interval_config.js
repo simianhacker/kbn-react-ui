@@ -34,20 +34,20 @@ export default (props) => {
   const columns = intervals.map((column, index) => {
     const rows = column.map(row => {
       return (
-        <div key={`interval-${row.value}`} className="timepicker__interval-item">
+        <div key={`interval-${row.value}`} className="kbnUITimepicker__interval-item">
           <a onClick={handleClick(row.value)}>{ row.label }</a>
         </div>
       );
     });
     return (
-      <div key={`interval-column-${index}`} className="timepicker__interval-column">
+      <div key={`interval-column-${index}`} className="kbnUITimepicker__interval-column">
         { rows }
       </div>
     );
   });
 
   return (
-    <div className="timepicker__interval">
+    <div className="kbnUITimepicker__interval">
       { columns }
     </div>
   );

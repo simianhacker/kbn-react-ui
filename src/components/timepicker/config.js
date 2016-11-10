@@ -75,10 +75,10 @@ export default React.createClass({
     const unit = units.find(u => u.value === this.state.relativeUnits);
 
     return (
-      <div className="timepicker__relative">
-        <div className="timepicker__relative-column">
-          <div className="timepicker__relative-label">From: { fromLabel }</div>
-          <div className="timepicker__relative-field">
+      <div className="kbnUITimepicker__relative">
+        <div className="kbnUITimepicker__relative-column">
+          <div className="kbnUITimepicker__relative-label">From: { fromLabel }</div>
+          <div className="kbnUITimepicker__relative-field">
             <input
               type="number"
               onChange={handleChange}
@@ -93,7 +93,7 @@ export default React.createClass({
               onChange={handleUnit}
               options={options}/>
           </div>
-          <div className="timepicker__relative-round-up">
+          <div className="kbnUITimepicker__relative-round-up">
             <label>
               <input type="checkbox"
                 ref="relativeRound"
@@ -103,9 +103,9 @@ export default React.createClass({
             </label>
           </div>
         </div>
-        <div className="timepicker__relative-column">
-          <div className="timepicker__relative-label">To: Now</div>
-          <div className="timepicker__relative-field">
+        <div className="kbnUITimepicker__relative-column">
+          <div className="kbnUITimepicker__relative-label">To: Now</div>
+          <div className="kbnUITimepicker__relative-field">
             <input
               type="text"
               value="Now"
@@ -178,50 +178,50 @@ export default React.createClass({
     };
 
     return (
-      <div className="timepicker__absolute">
-        <div className="timepicker__absolute-column">
-          <div className="timepicker__absolute-label">From:</div>
-          <div className="timepicker__absolute-field">
+      <div className="kbnUITimepicker__absolute">
+        <div className="kbnUITimepicker__absolute-column">
+          <div className="kbnUITimepicker__absolute-label">From:</div>
+          <div className="kbnUITimepicker__absolute-field">
             <input
               className="thor__input"
               ref="absoluteFromString"
               onChange={handleChange('absoluteFromString')}
               value={fromString}/>
           </div>
-          <div className="timepicker__absolute-format">{ format }</div>
-          <div className="timepicker__absolute-calendar">
+          <div className="kbnUITimepicker__absolute-format">{ format }</div>
+          <div className="kbnUITimepicker__absolute-calendar">
             <DateTime
-              className="timepicker__calendar"
+              className="kbnUITimepicker__calendar"
               value={from}
               isValidDate={validateFrom}
               onChange={handleDatePickerChange('absoluteFrom')}
               input={false}/>
           </div>
         </div>
-        <div className="timepicker__absolute-column">
-          <div className="timepicker__absolute-label">
+        <div className="kbnUITimepicker__absolute-column">
+          <div className="kbnUITimepicker__absolute-label">
             <span>To: </span>
             <a className="thor__button-solid-default sm"
               onClick={handleNow}>Set To Now</a>
           </div>
-          <div className="timepicker__absolute-field">
+          <div className="kbnUITimepicker__absolute-field">
             <input
               className="thor__input"
               ref="absoluteToString"
               onChange={handleChange('absoluteToString')}
               value={toString}/>
           </div>
-          <div className="timepicker__absolute-format">{ format }</div>
-          <div className="timepicker__absolute-calendar">
+          <div className="kbnUITimepicker__absolute-format">{ format }</div>
+          <div className="kbnUITimepicker__absolute-calendar">
             <DateTime
-              className="timepicker__calendar"
+              className="kbnUITimepicker__calendar"
               value={to}
               isValidDate={validateTo}
               onChange={handleDatePickerChange('absoluteTo')}
               input={false}/>
           </div>
         </div>
-        <div className="timepicker__absolute-column">
+        <div className="kbnUITimepicker__absolute-column">
           <button
             style={{ margin: '28px 0 0 0' }}
             onClick={handleClick}
@@ -247,22 +247,22 @@ export default React.createClass({
     const renderItem = (row, i) => {
       return (
         <a
-          key={`timepicker-item-${row.section}-${i}`}
-          className="timepicker__quick-item"
+          key={`kbnUITimepicker-item-${row.section}-${i}`}
+          className="kbnUITimepicker__quick-item"
           onClick={pick(row.from, row.to)}>{ row.display }</a>
       );
     };
     const bySection = section => row => row.section === section;
     const renderColumn = section => {
       return (
-        <div key={`timepicker-section-${section}`}
-          className="timepicker__quick-column">
+        <div key={`kbnUITimepicker-section-${section}`}
+          className="kbnUITimepicker__quick-column">
           { quickRanges.filter(bySection(section)).map(renderItem) }
         </div>
       );
     };
     return (
-      <div className="timepicker__quick">
+      <div className="kbnUITimepicker__quick">
         { _.times(4).map(renderColumn) }
       </div>
     );
@@ -274,9 +274,9 @@ export default React.createClass({
 
   render() {
     let panel;
-    let quickClassName = 'timepicker__switcher-option';
-    let relativeClassName = 'timepicker__switcher-option';
-    let absoluteClassName = 'timepicker__switcher-option';
+    let quickClassName = 'kbnUITimepicker__switcher-option';
+    let relativeClassName = 'kbnUITimepicker__switcher-option';
+    let absoluteClassName = 'kbnUITimepicker__switcher-option';
     switch (this.state.panel) {
       case 'absolute':
         panel = this.renderAbsolute();
@@ -291,8 +291,8 @@ export default React.createClass({
         quickClassName += ' active';
     }
     return (
-      <div className="timepicker__picker">
-        <div className="timepicker__switcher">
+      <div className="kbnUITimepicker__picker">
+        <div className="kbnUITimepicker__switcher">
           <a className={quickClassName}
             onClick={ e => this.switchTo('quick') }>Quick</a>
           <a className={relativeClassName}
@@ -300,7 +300,7 @@ export default React.createClass({
           <a className={absoluteClassName}
             onClick={ e => this.switchTo('absolute') }>Absolute</a>
        </div>
-        <div className="timepicker__active_panel">{ panel }</div>
+        <div className="kbnUITimepicker__active_panel">{ panel }</div>
       </div>
     );
   }

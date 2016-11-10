@@ -80,13 +80,13 @@ export default React.createClass({
       config = (<IntervalConfig onChange={this.handleIntervalChange}/>);
     }
     const style = { backgroundColor };
-    let className = 'header';
+    let className = 'kbnUIHeader';
     if (backgroundColor && color(backgroundColor).luminosity() < 0.45) {
-      className = 'header reversed';
+      className = 'kbnUIHeader reversed';
     }
     return (
       <div style={style} className={className}>
-        <div className="header__content">
+        <div className="kbnUIHeader__content">
           { this.props.children }
           <Timepicker
             refresh={this.props.app.refresh}

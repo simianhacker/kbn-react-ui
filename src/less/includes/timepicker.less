@@ -1,0 +1,138 @@
+.kbnUITimepicker {
+  flex: 0 0 auto;
+  color: @grayDark;
+  display: flex;
+  align-items: center;
+}
+
+.kbnUITimepicker__refresh {
+  margin: 0 20px;
+}
+
+.kbnUITimepicker__refresh,
+.kbnUITimepicker__pick {
+  display: flex;
+  align-items: center;
+}
+
+.kbnUITimepicker__refresh-label,
+.kbnUITimepicker__pick-label {
+  margin-left: 10px;
+}
+
+.kbnUITimepicker__picker {
+  display: flex;
+}
+
+.kbnUITimepicker__switcher {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex: 1 0 auto;
+  width: 20%;
+  margin-right: 10px;
+}
+
+.kbnUITimepicker__switcher-option {
+  display: block;
+  padding: 10px 15px;
+  border-radius: 4px;
+  &:hover {
+    background-color: @grayLightest;
+  }
+  &.active {
+    background-color: @esYellow;
+    color: @black;
+  }
+}
+
+.kbnUITimepicker__active_panel {
+  width: 80%;
+  display: flex;
+  align-items: center;
+}
+
+.kbnUITimepicker__quick {
+  display: flex;
+}
+
+.kbnUITimepicker__quick-column {
+  margin: 0 20px;
+}
+
+.kbnUITimepicker__quick-item {
+  display: block;
+}
+
+.kbnUITimepicker__relative {
+  display: flex;
+  margin-left: 20px;
+}
+
+.kbnUITimepicker__relative-column {
+  margin-right: 20px;
+}
+
+.kbnUITimepicker__relative-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.kbnUITimepicker__relative-field {
+  display: flex;
+}
+
+.kbnUITimepicker__absolute {
+  display: flex;
+  margin-left: 20px;
+}
+
+.kbnUITimepicker__absolute-column {
+  margin-right: 20px;
+
+}
+
+.kbnUITimepicker__calendar {
+  .rdtPicker {
+    background-color: #F6F6F6;
+    .rdtTimeToggle {
+      display: none;
+    }
+    td.rdtToday:before {
+      border-bottom: 7px solid #154751;
+    }
+    td.rdtToday.rdtActive:before {
+      border-bottom: 7px solid #FFF;
+    }
+    td.rdtActive {
+      background-color: #154751;
+      border-radius: 2px;
+    }
+  }
+}
+
+.kbnUITimepicker__absolute-format {
+  font-size: 0.9em;
+  color: @textColor;
+  text-align: center;
+}
+
+.kbnUITimepicker__absolute-field {
+  margin-bottom: 5px;
+  display: flex;
+  input { flex: 1 0 auto; }
+}
+
+.kbnUITimepicker__absolute-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.kbnUITimepicker__interval {
+  display: flex;
+}
+
+.kbnUITimepicker__interval-column {
+  margin-right: 20px;
+}
+

@@ -1,0 +1,40 @@
+.kbnUIHeader__content {
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  .btn {
+    margin-left: 10px;
+  }
+}
+
+.kbnUIHeader__breadcrumbs {
+  flex: 1 0 auto;
+  > * {
+    margin-right: 10px;
+  }
+}
+
+.kbnUIHeader {
+  @color: rgba(0,0,0,0.6);
+  .kbnUIHeader__breadcrumbs {
+    a { color: @color }
+    color: @color;
+  }
+  .kbnUITimepicker__pick { color: @color }
+  .kbnUITimepicker__refresh { color: @color }
+  .kbnUIHeader__link { color: @color }
+}
+
+.kbnUIHeader.reversed {
+  @color: rgba(255,255,255,0.7);
+  .kbnUIHeader__breadcrumbs {
+    a { color: @color }
+    color: @color;
+  }
+  .kbnUITimepicker__pick { color: @color }
+  .kbnUITimepicker__refresh { color: @color }
+  .kbnUIHeader__link { color: @color }
+}
+
+
