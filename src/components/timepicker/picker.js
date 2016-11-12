@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import moment from 'moment';
-import ConfigPanel from '../config_panel';
+import ConfigPanel from '../header/config_panel';
 import prettyDurration from './pretty_durration';
 import prettyInterval from './pretty_interval';
 

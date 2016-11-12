@@ -22,13 +22,9 @@ var _interval_config = require('../timepicker/interval_config');
 
 var _interval_config2 = _interopRequireDefault(_interval_config);
 
-var _config_panel = require('../config_panel');
+var _config_panel = require('./config_panel');
 
 var _config_panel2 = _interopRequireDefault(_config_panel);
-
-var _editable_text = require('../editable_text');
-
-var _editable_text2 = _interopRequireDefault(_editable_text);
 
 var _color = require('color');
 

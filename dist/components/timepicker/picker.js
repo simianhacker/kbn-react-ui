@@ -14,7 +14,7 @@ var _moment = require('moment');
 
 var _moment2 = _interopRequireDefault(_moment);
 
-var _config_panel = require('../config_panel');
+var _config_panel = require('../header/config_panel');
 
 var _config_panel2 = _interopRequireDefault(_config_panel);
 

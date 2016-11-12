@@ -3,8 +3,7 @@ import React, { Component, PropTypes } from 'react';
 import Timepicker from '../timepicker/picker';
 import TimepickerConfig from '../timepicker/config';
 import IntervalConfig from '../timepicker/interval_config';
-import ConfigPanel from '../config_panel';
-import EditableText from '../editable_text';
+import ConfigPanel from './config_panel';
 import color from 'color';
 
 export default React.createClass({
